@@ -6,11 +6,17 @@ import (
 )
 
 func main() {
-	// res := numJewelsInStones("aAA", "aAAbbbb")
-	// fmt.Println(res)
-	fmt.Println(strings.Title()("gg hafd 54"))
+	res := numJewelsInStones("aA", "aAAbbbb")
+	fmt.Println(res)
 }
 
-// func numJewelsInStones(J string, S string) int {
-// strings.Fields()
-// }
+func numJewelsInStones(J string, S string) int {
+	count := 0
+	for _, v := range S {
+		if strings.ContainsAny(J, string(v)) {
+			count++
+		}
+	}
+
+	return count
+}
