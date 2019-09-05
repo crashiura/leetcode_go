@@ -38,7 +38,7 @@ func subArraySum2(nums []int, k int) int {
 
 		sum += n
 		cnt += Map[sum-k]
-		Map[sum] ++
+		Map[sum]++
 	}
 
 	return cnt
@@ -56,7 +56,7 @@ func subarraySum(nums []int, k int) int {
 
 		sum += n
 		res += sumMap[sum-k]
-		sumMap[sum] ++
+		sumMap[sum]++
 	}
 
 	return res
